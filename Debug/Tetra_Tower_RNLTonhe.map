@@ -1,0 +1,1418 @@
+******************************************************************************
+             TMS320C2000 Linker PC v22.6.1                     
+******************************************************************************
+>> Linked Tue Jan  6 19:29:44 2026
+
+OUTPUT FILE NAME:   <Tetra_Tower_RNLTonhe.out>
+ENTRY POINT SYMBOL: "_c_int00"  address: 0008bf42
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+PAGE 0:
+  RAMM0                 000000f5   0000030b  00000000  0000030b  RWIX
+  RAMLS0                00008000   00000800  000000f0  00000710  RWIX
+  RAMLS1                00008800   00000800  00000000  00000800  RWIX
+  RAMLS2                00009000   00000800  00000000  00000800  RWIX
+  RAMLS3                00009800   00000800  00000000  00000800  RWIX
+  RAMLS4                0000a000   00000800  00000000  00000800  RWIX
+  BEGIN                 00085000   00000002  00000002  00000000  RWIX
+  FLASH_TEXT            00085002   00009ffe  000074ba  00002b44  RWIX
+  FLASH_BANK0_SEC15     0008f000   00001000  00000123  00000edd  RWIX
+  FLASH_BANK1_SEC0      00090000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC1      00091000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC2      00092000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC3      00093000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC4      00094000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC5      00095000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC6      00096000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC7      00097000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC8      00098000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC9      00099000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC10     0009a000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC11     0009b000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC12     0009c000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC13     0009d000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC14     0009e000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC15     0009f000   00000ff0  00000000  00000ff0  RWIX
+  FLASH_BANK1_SEC15_DO_ 0009fff0   00000010  00000000  00000010  RWIX
+  RESET                 003fffc0   00000002  00000000  00000002  RWIX
+
+PAGE 1:
+  BOOT_RSVD             00000002   000000f3  00000000  000000f3  RWIX
+  RAMM1                 00000400   00000400  00000200  00000200  RWIX
+  RAMLS5                0000a800   00000800  0000065a  000001a6  RWIX
+  RAMLS6                0000b000   00000800  00000000  00000800  RWIX
+  RAMLS7                0000b800   00000800  00000000  00000800  RWIX
+  RAMGS0                0000c000   00002000  00000000  00002000  RWIX
+  RAMGS1                0000e000   00002000  00000000  00002000  RWIX
+  RAMGS2                00010000   00002000  00000000  00002000  RWIX
+  RAMGS3                00012000   00002000  00000000  00002000  RWIX
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+codestart 
+*          0    00085000    00000002     
+                  00085000    00000002     f28004x_codestartbranch.obj (codestart)
+
+.text      0    00085004    00007277     
+                  00085004    000012a0     Charger.obj (.text)
+                  000862a4    00000b9a     ChargerApp.obj (.text)
+                  00086e3e    00000ad6     CMSCAN.obj (.text)
+                  00087914    00000a29     MCUspecific.obj (.text)
+                  0008833d    000006c6     main.obj (.text)
+                  00088a03    000005a6     RNL.obj (.text)
+                  00088fa9    0000053d     main.obj (.text:retain)
+                  000894e6    000004d0     can.obj (.text)
+                  000899b6    0000041e     sysctl.obj (.text)
+                  00089dd4    00000347     TCA9539.obj (.text)
+                  0008a11b    00000324     dcc.obj (.text)
+                  0008a43f    000002eb     TonheCAN.obj (.text)
+                  0008a72a    00000294     F021_API_F28004x_FPU32.lib : FlashStateMachine.obj (.text:__Fapi_setupFlashStateMachine)
+                  0008a9be    00000222     InterruptHandling.obj (.text:retain)
+                  0008abe0    0000021d     sci.obj (.text)
+                  0008adfd    0000020e     Modbus.obj (.text)
+                  0008b00b    000001eb     gpio.obj (.text)
+                  0008b1f6    000001e7     device.obj (.text)
+                  0008b3dd    000001e0     F021_API_F28004x_FPU32.lib : Program.obj (.text:_Fapi_issueProgrammingCommand)
+                  0008b5bd    00000173     interrupt.obj (.text)
+                  0008b730    00000149     MuxIO.obj (.text)
+                  0008b879    00000130     adc.obj (.text)
+                  0008b9a9    0000012e     i2c.obj (.text)
+                  0008bad7    000000d1     ACEMeter.obj (.text)
+                  0008bba8    000000a7     F021_API_F28004x_FPU32.lib : Init.obj (.text:_Fapi_initializeAPI)
+                  0008bc4f    000000a2     DCEMeter.obj (.text)
+                  0008bcf1    0000008f     ChargerApp_FCN01ACFaultFlag.obj (.text)
+                  0008bd80    00000088     rts2800_fpu32.lib : fs_div28.asm.obj (.text)
+                  0008be08    0000007a     J1939.obj (.text)
+                  0008be82    00000064     F021_API_F28004x_FPU32.lib : Async.obj (.text:_Fapi_issueAsyncCommandWithAddress)
+                  0008bee6    0000005c                                : FlashStateMachine.obj (.text:_Fapi_setupEepromSectorEnable)
+                  0008bf42    00000056     rts2800_fpu32.lib : boot28.asm.obj (.text)
+                  0008bf98    00000045     IMD.obj (.text)
+                  0008bfdd    00000030     F021_API_F28004x_FPU32.lib : FlashStateMachine.obj (.text:__Fapi_issueFsmCommand)
+                  0008c00d    0000002f                                : FlashStateMachine.obj (.text:_Fapi_setActiveFlashBank)
+                  0008c03c    0000002c                                : Utilities.obj (.text:_Fapi_calculateFletcherChecksum)
+                  0008c068    0000002b                                : FlashStateMachine.obj (.text:__Fapi_setupSectorsForWrite)
+                  0008c093    0000002a                                : Utilities.obj (.text:__Fapi_divideUnsignedLong)
+                  0008c0bd    0000002a     interrupt.obj (.text:retain)
+                  0008c0e7    0000002a     rts2800_fpu32.lib : l_div28.asm.obj (.text)
+                  0008c111    00000029                       : exit.c.obj (.text)
+                  0008c13a    00000028     F021_API_F28004x_FPU32.lib : FlashStateMachine.obj (.text:_Fapi_setupBankSectorEnable)
+                  0008c162    00000025     rts2800_fpu32.lib : fs_toullfpu32.asm.obj (.text)
+                  0008c187    00000024                       : cpy_tbl.c.obj (.text)
+                  0008c1ab    0000001e     InterruptHandling.obj (.text)
+                  0008c1c9    0000001e     rts2800_fpu32.lib : ll_cmp28.asm.obj (.text)
+                  0008c1e7    0000001d                       : memcpy.c.obj (.text)
+                  0008c204    00000018                       : ll_aox28.asm.obj (.text)
+                  0008c21c    00000012                       : args_main.c.obj (.text)
+                  0008c22e    0000000f     F021_API_F28004x_FPU32.lib : Utilities.obj (.text:__Fapi_scaleCycleValues)
+                  0008c23d    0000000b                                : FlashStateMachine.obj (.text:_Fapi_checkFsmForReady)
+                  0008c248    0000000b                                : Utilities.obj (.text:__Fapi_calculateOtpChecksum)
+                  0008c253    0000000b     rts2800_fpu32.lib : u_div28.asm.obj (.text)
+                  0008c25e    00000009                       : _lock.c.obj (.text)
+                  0008c267    00000008     f28004x_codestartbranch.obj (.text)
+                  0008c26f    00000007     F021_API_F28004x_FPU32.lib : FlashStateMachine.obj (.text:_Fapi_getFsmStatus)
+                  0008c276    00000002                                : FlashStateMachine.obj (.text:_Fapi_serviceWatchdogTimer)
+                  0008c278    00000002     rts2800_fpu32.lib : pre_init.c.obj (.text)
+                  0008c27a    00000001                       : startup.c.obj (.text)
+
+.cinit     0    0008c27c    00000153     
+                  0008c27c    000000c7     MCUspecific.obj (.cinit:_ptcTable)
+                  0008c343    0000002e     main.obj (.cinit)
+                  0008c371    00000018     RNL.obj (.cinit)
+                  0008c389    00000010     InterruptHandling.obj (.cinit)
+                  0008c399    0000000e     rts2800_fpu32.lib : exit.c.obj (.cinit)
+                  0008c3a7    0000000a     device.obj (.cinit)
+                  0008c3b1    00000009     TonheCAN.obj (.cinit:_Rectifier_IregCheck$2)
+                  0008c3ba    00000009     TonheCAN.obj (.cinit:_Rectifier_count$1)
+                  0008c3c3    00000005     rts2800_fpu32.lib : _lock.c.obj (.cinit:__lock)
+                  0008c3c8    00000005                       : _lock.c.obj (.cinit:__unlock)
+                  0008c3cd    00000002     --HOLE-- [fill = 0]
+
+.pinit     0    00085004    00000000     UNINITIALIZED
+
+.reset     0    003fffc0    00000002     DSECT
+                  003fffc0    00000002     rts2800_fpu32.lib : boot28.asm.obj (.reset)
+
+.stack     1    00000400    00000200     UNINITIALIZED
+                  00000400    00000200     --HOLE--
+
+.ebss      1    0000a800    0000065a     UNINITIALIZED
+                  0000a800    00000452     main.obj (.ebss)
+                  0000ac52    00000013     Charger.obj (.ebss)
+                  0000ac65    00000001     --HOLE--
+                  0000ac66    0000000a     F021_API_F28004x_FPU32.lib : Init.obj (.ebss)
+                  0000ac70    00000006     RNL.obj (.ebss)
+                  0000ac76    00000006     TonheCAN.obj (.ebss:_Rectifier_IregCheck$2)
+                  0000ac7c    00000004     device.obj (.ebss)
+                  0000ac80    000000c8     MCUspecific.obj (.ebss:_ptcTable)
+                  0000ad48    00000006     TonheCAN.obj (.ebss:_Rectifier_count$1)
+                  0000ad4e    00000006     rts2800_fpu32.lib : exit.c.obj (.ebss)
+                  0000ad54    00000005     InterruptHandling.obj (.ebss)
+                  0000ad59    00000001     --HOLE--
+                  0000ad5a    00000002     DCEMeter.obj (.ebss)
+                  0000ad5c    00000002     main.obj (.ebss:_Data1)
+                  0000ad5e    00000002     main.obj (.ebss:_Data2)
+                  0000ad60    00000002     main.obj (.ebss:_I2Cstatus)
+                  0000ad62    00000002     rts2800_fpu32.lib : _lock.c.obj (.ebss:__lock)
+                  0000ad64    00000002                       : _lock.c.obj (.ebss:__unlock)
+                  0000ad66    0000001a     --HOLE--
+                  0000ad80    0000005a     main.obj (.ebss:_TonheLeftGun)
+                  0000adda    00000026     --HOLE--
+                  0000ae00    0000005a     main.obj (.ebss:_TonheRightGun)
+
+.econst    0    0008f000    00000123     
+                  0008f000    00000100     Modbus.obj (.econst:_CRCTable)
+                  0008f100    00000008     RNL.obj (.econst:_$P$T0$3)
+                  0008f108    00000008     RNL.obj (.econst:_$P$T1$4)
+                  0008f110    00000008     Charger.obj (.econst:_$P$T6$5)
+                  0008f118    00000008     Charger.obj (.econst:_$P$T7$6)
+                  0008f120    00000001     Charger.obj (.econst:_$P$T10$9)
+                  0008f121    00000001     Charger.obj (.econst:_$P$T8$7)
+                  0008f122    00000001     Charger.obj (.econst:_$P$T9$8)
+
+.TI.ramfunc 
+*          0    0008c3d0    000000f0     RUN ADDR = 00008000
+                  0008c3d0    000000d1     flash.obj (.TI.ramfunc)
+                  0008c4a1    0000000e     Charger.obj (.TI.ramfunc)
+                  0008c4af    0000000d     main.obj (.TI.ramfunc)
+                  0008c4bc    00000004     sysctl.obj (.TI.ramfunc)
+
+.TI.memcrc 
+*          0    00000000    0000007e     COPY SECTION
+                  00000000    0000007e     (.TI.memcrc:_ccs_flash_checksum)
+
+MODULE SUMMARY
+
+       Module                            code    initialized data   uninitialized data
+       ------                            ----    ----------------   ------------------
+    .\
+       main.obj                          3101    46                 1292              
+       InterruptHandling.obj             576     16                 5                 
+       f28004x_codestartbranch.obj       10      0                  0                 
+    +--+---------------------------------+-------+------------------+--------------------+
+       Total:                            3687    62                 1297              
+                                                                                      
+    .\ApplicationLayer\
+       RNL.obj                           1446    40                 6                 
+       TonheCAN.obj                      747     18                 12                
+       MuxIO.obj                         329     0                  0                 
+       ACEMeter.obj                      209     0                  0                 
+       DCEMeter.obj                      162     0                  2                 
+       IMD.obj                           69      0                  0                 
+    +--+---------------------------------+-------+------------------+--------------------+
+       Total:                            2962    58                 20                
+                                                                                      
+    .\ChargerLevel\
+       Charger.obj                       4796    19                 19                
+       ChargerApp.obj                    2970    0                  0                 
+       CMSCAN.obj                        2774    0                  0                 
+       ChargerApp_FCN01ACFaultFlag.obj   143     0                  0                 
+    +--+---------------------------------+-------+------------------+--------------------+
+       Total:                            10683   19                 19                
+                                                                                      
+    .\MCU_HAL\driverlib\
+       can.obj                           1232    0                  0                 
+       sysctl.obj                        1062    0                  0                 
+       dcc.obj                           804     0                  0                 
+       sci.obj                           541     0                  0                 
+       device.obj                        487     10                 4                 
+       gpio.obj                          491     0                  0                 
+       flash.obj                         418     0                  0                 
+       interrupt.obj                     413     0                  0                 
+       adc.obj                           304     0                  0                 
+       i2c.obj                           302     0                  0                 
+    +--+---------------------------------+-------+------------------+--------------------+
+       Total:                            6054    10                 4                 
+                                                                                      
+    .\MIddleLayer\
+       MCUspecific.obj                   2601    199                200               
+       TCA9539.obj                       839     0                  0                 
+       Modbus.obj                        526     256                0                 
+       J1939.obj                         122     0                  0                 
+    +--+---------------------------------+-------+------------------+--------------------+
+       Total:                            4088    455                200               
+                                                                                      
+    C:/ti/c2000/C2000Ware_5_04_00_00/libraries/flash_api/f28004x/lib/F021_API_F28004x_FPU32.lib
+       FlashStateMachine.obj             950     0                  0                 
+       Program.obj                       480     0                  0                 
+       Init.obj                          167     0                  10                
+       Utilities.obj                     112     0                  0                 
+       Async.obj                         100     0                  0                 
+    +--+---------------------------------+-------+------------------+--------------------+
+       Total:                            1809    0                  10                
+                                                                                      
+    C:/ti/ccs1281/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/lib/rts2800_fpu32.lib
+       fs_div28.asm.obj                  136     0                  0                 
+       boot28.asm.obj                    86      0                  0                 
+       exit.c.obj                        41      14                 6                 
+       l_div28.asm.obj                   42      0                  0                 
+       fs_toullfpu32.asm.obj             37      0                  0                 
+       cpy_tbl.c.obj                     36      0                  0                 
+       ll_cmp28.asm.obj                  30      0                  0                 
+       memcpy.c.obj                      29      0                  0                 
+       ll_aox28.asm.obj                  24      0                  0                 
+       _lock.c.obj                       9       10                 4                 
+       args_main.c.obj                   18      0                  0                 
+       u_div28.asm.obj                   11      0                  0                 
+       pre_init.c.obj                    2       0                  0                 
+       startup.c.obj                     1       0                  0                 
+    +--+---------------------------------+-------+------------------+--------------------+
+       Total:                            502     24                 10                
+                                                                                      
+       Stack:                            0       0                  512               
+    +--+---------------------------------+-------+------------------+--------------------+
+       Grand Total:                      29785   628                2072              
+
+
+LINKER GENERATED MEMRANGE CRC TABLES
+
+_ccs_flash_checksum @ 00000000 records: 20, size/record: 6, table size: 126, algorithm=C28_CHECKSUM_16(ID=13), CRC: 0000ef59
+	BEGIN: page=0, load addr=00085000, size=00000002
+	FLASH_TEXT: page=0, load addr=00085002, size=00009ffe
+	FLASH_BANK0_SEC15: page=0, load addr=0008f000, size=00001000
+	FLASH_BANK1_SEC0: page=0, load addr=00090000, size=00001000
+	FLASH_BANK1_SEC1: page=0, load addr=00091000, size=00001000
+	FLASH_BANK1_SEC2: page=0, load addr=00092000, size=00001000
+	FLASH_BANK1_SEC3: page=0, load addr=00093000, size=00001000
+	FLASH_BANK1_SEC4: page=0, load addr=00094000, size=00001000
+	FLASH_BANK1_SEC5: page=0, load addr=00095000, size=00001000
+	FLASH_BANK1_SEC6: page=0, load addr=00096000, size=00001000
+	FLASH_BANK1_SEC7: page=0, load addr=00097000, size=00001000
+	FLASH_BANK1_SEC8: page=0, load addr=00098000, size=00001000
+	FLASH_BANK1_SEC9: page=0, load addr=00099000, size=00001000
+	FLASH_BANK1_SEC10: page=0, load addr=0009a000, size=00001000
+	FLASH_BANK1_SEC11: page=0, load addr=0009b000, size=00001000
+	FLASH_BANK1_SEC12: page=0, load addr=0009c000, size=00001000
+	FLASH_BANK1_SEC13: page=0, load addr=0009d000, size=00001000
+	FLASH_BANK1_SEC14: page=0, load addr=0009e000, size=00001000
+	FLASH_BANK1_SEC15: page=0, load addr=0009f000, size=00000ff0
+	FLASH_BANK1_SEC15_DO_NOT_USE: page=0, load addr=0009fff0, size=00000010
+
+
+GLOBAL DATA SYMBOLS: SORTED BY DATA PAGE
+
+address     data page           name
+--------    ----------------    ----
+00000400      10 (00000400)     __stack
+
+0000a800     2a0 (0000a800)     _SCIbreakDTflag
+0000a801     2a0 (0000a800)     _RCAN
+0000a802     2a0 (0000a800)     _LCAN
+0000a803     2a0 (0000a800)     _ACEMModBusStatus
+0000a804     2a0 (0000a800)     _DCEMModBusStatus1
+0000a805     2a0 (0000a800)     _DCEMModBusStatus2
+0000a806     2a0 (0000a800)     _IMDStatus1
+0000a807     2a0 (0000a800)     _IMDStatus2
+0000a808     2a0 (0000a800)     _MuxIO1
+0000a809     2a0 (0000a800)     _MuxIO2
+0000a80a     2a0 (0000a800)     _DIOStatus
+0000a80b     2a0 (0000a800)     _ModBusStartTaskFlag
+0000a80c     2a0 (0000a800)     _ModbusStartTask
+0000a80d     2a0 (0000a800)     _ACDisconnect
+0000a80e     2a0 (0000a800)     _RNLRightMSGCTRL
+0000a80f     2a0 (0000a800)     _RNLLeftMSGCTRL
+0000a810     2a0 (0000a800)     _RNLRightFlag
+0000a811     2a0 (0000a800)     _RNLLeftFlag
+0000a812     2a0 (0000a800)     _SendRight
+0000a813     2a0 (0000a800)     _SendLeft
+0000a818     2a0 (0000a800)     _IMDData1
+0000a81a     2a0 (0000a800)     _IMDData2
+0000a81c     2a0 (0000a800)     _startTime
+0000a81e     2a0 (0000a800)     _endTime
+0000a820     2a0 (0000a800)     _elapsedTime
+0000a822     2a0 (0000a800)     _Right
+0000a826     2a0 (0000a800)     _Left
+0000a82a     2a0 (0000a800)     _RightPS1
+0000a82e     2a0 (0000a800)     _LeftPS1
+0000a832     2a0 (0000a800)     _RightPS2
+0000a836     2a0 (0000a800)     _LeftPS2
+0000a83a     2a0 (0000a800)     _RightPL1
+
+0000a840     2a1 (0000a840)     _LeftPL1
+0000a844     2a1 (0000a840)     _RightPL2
+0000a848     2a1 (0000a840)     _LeftPL2
+0000a84c     2a1 (0000a840)     _RightCSI1
+0000a850     2a1 (0000a840)     _LeftCSI1
+0000a854     2a1 (0000a840)     _RightCSI2
+0000a858     2a1 (0000a840)     _LeftCSI2
+0000a85c     2a1 (0000a840)     _RightCSI3
+0000a860     2a1 (0000a840)     _LeftCSI3
+0000a864     2a1 (0000a840)     _Tonhe_Status
+0000a86a     2a1 (0000a840)     _DC_EnergyMeterData1
+0000a874     2a1 (0000a840)     _DC_EnergyMeterData2
+
+0000a880     2a2 (0000a880)     _FaultAndCounter
+0000a88c     2a2 (0000a880)     _ChargerAnalogReadVolt
+
+0000a8c0     2a3 (0000a8c0)     _AC_EnergyMeterData
+
+0000a900     2a4 (0000a900)     _RNLRightGunSend
+
+0000a940     2a5 (0000a940)     _RNLLeftGunSend
+
+0000a980     2a6 (0000a980)     _RNLRightGun
+
+0000a9c0     2a7 (0000a9c0)     _RNLLeftGun
+
+0000aa00     2a8 (0000aa00)     _ChargerData
+
+0000aa80     2aa (0000aa80)     _RightGun
+
+0000ab80     2ae (0000ab80)     _LeftGun
+
+0000ac5c     2b1 (0000ac40)     _RNL_Var
+0000ac66     2b1 (0000ac40)     _Fapi_GlobalInit
+0000ac70     2b1 (0000ac40)     _BCL_Received_Flag_G1
+0000ac71     2b1 (0000ac40)     _BCL_Received_Flag_G2
+0000ac72     2b1 (0000ac40)     _BST_Received_Flag_G1
+0000ac73     2b1 (0000ac40)     _BST_Received_Flag_G2
+0000ac7c     2b1 (0000ac40)     _Example_PassCount
+0000ac7e     2b1 (0000ac40)     _Example_Fail
+
+0000ac80     2b2 (0000ac80)     _ptcTable
+
+0000ad4e     2b5 (0000ad40)     ___TI_enable_exit_profile_output
+0000ad50     2b5 (0000ad40)     ___TI_cleanup_ptr
+0000ad52     2b5 (0000ad40)     ___TI_dtors_ptr
+0000ad54     2b5 (0000ad40)     _CANstatus
+0000ad55     2b5 (0000ad40)     _TonheRCount
+0000ad56     2b5 (0000ad40)     _TonheLCount
+0000ad57     2b5 (0000ad40)     _GunNumber1
+0000ad58     2b5 (0000ad40)     _GunNumber2
+0000ad5a     2b5 (0000ad40)     _VoltageX
+0000ad5c     2b5 (0000ad40)     _Data1
+0000ad5e     2b5 (0000ad40)     _Data2
+0000ad60     2b5 (0000ad40)     _I2Cstatus
+0000ad62     2b5 (0000ad40)     __lock
+0000ad64     2b5 (0000ad40)     __unlock
+
+0000ad80     2b6 (0000ad80)     _TonheLeftGun
+
+0000ae00     2b8 (0000ae00)     _TonheRightGun
+
+0008f000    23c0 (0008f000)     _CRCTable
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+page  address   name                                   
+----  -------   ----                                   
+0     00085004  .text                                  
+0     0008c111  C$$EXIT                                
+0     0008bd80  FS$$DIV                                
+0     0008c162  FS$$TOULL                              
+0     0008c0e7  L$$DIV                                 
+0     0008c0f6  L$$MOD                                 
+0     0008c204  LL$$AND                                
+0     0008c1c9  LL$$CMP                                
+0     0008c20c  LL$$OR                                 
+0     0008c214  LL$$XOR                                
+0     0008c253  U$$DIV                                 
+0     0008c258  U$$MOD                                 
+0     0008c104  UL$$DIV                                
+0     0008c10b  UL$$MOD                                
+0     0008c1db  ULL$$CMP                               
+1     0000a80d  _ACDisconnect                          
+1     0000a803  _ACEMModBusStatus                      
+0     0008baeb  _ACEMRead3PhaseValue                   
+0     0008bafc  _ACReadOneParaValue                    
+1     0000a8c0  _AC_EnergyMeterData                    
+0     00088113  _ADC_Init                              
+0     0008b8bc  _ADC_setINLTrim                        
+0     0008b902  _ADC_setOffsetTrim                     
+0     0008b94f  _ADC_setOffsetTrimAll                  
+0     0008b977  _ADC_setPPBTripLimits                  
+0     0008b879  _ADC_setVREF                           
+1     0000ac70  _BCL_Received_Flag_G1                  
+1     0000ac71  _BCL_Received_Flag_G2                  
+1     0000ac72  _BST_Received_Flag_G1                  
+1     0000ac73  _BST_Received_Flag_G2                  
+0     0008899e  _BenchTestCode                         
+0     00085d3f  _BootISR                               
+0     00087fb9  _CANInterruptEnable                    
+0     00087f7b  _CANMSGObjectSetup                     
+0     00086d54  _CANPerfaultcheck                      
+0     00087f94  _CANSendMessage                        
+0     000895fa  _CAN_clearInterruptStatus              
+0     00089945  _CAN_clearMessage                      
+0     00089989  _CAN_disableAllMessageObjects          
+0     00089967  _CAN_disableMessageObject              
+0     00089571  _CAN_initModule                        
+0     00089872  _CAN_readMessage                       
+0     000898c3  _CAN_readMessageWithID                 
+0     000896e0  _CAN_sendMessage                       
+0     00089727  _CAN_sendMessage_16bit                 
+0     0008976e  _CAN_sendMessage_32bit                 
+0     000897b5  _CAN_sendMessage_updateDLC             
+0     00089842  _CAN_sendRemoteRequestMessage          
+0     00089584  _CAN_setBitRate                        
+0     000895c8  _CAN_setBitTiming                      
+0     00089628  _CAN_setupMessageObject                
+0     000898f6  _CAN_transferMessage                   
+0     00088273  _CANclearGlobalInterruptStatus         
+0     00088269  _CANclearInterruptStatus               
+0     00088263  _CANgetInterruptCause                  
+0     0008824e  _CANgetStatus                          
+0     00088254  _CANreadMessageWithID                  
+1     0000ad54  _CANstatus                             
+0     00086ed7  _CMSRXCANOBJSet                        
+0     000872fa  _CMSRXCANOBJState                      
+0     00087286  _CMSTempSensor                         
+0     0008730e  _CMS_ProcessState                      
+0     00088178  _CPUTimerInit                          
+0     00088280  _CPUTimergetTimerCount                 
+0     0008ae44  _CRC16                                 
+0     0008f000  _CRCTable                              
+1     0000a88c  _ChargerAnalogReadVolt                 
+0     0008686f  _ChargerApp_FCN00StopChrage00          
+0     000862cd  _ChargerApp_FCN01ACFaultFlag           
+0     00086369  _ChargerApp_FCN01ACFaultGlobalFlag     
+0     00086409  _ChargerApp_FCN02DCGUNFaultCheck       
+0     00086483  _ChargerApp_FCN04PowerAllocation       
+0     00086521  _ChargerApp_FCN05GunState05            
+0     000863a9  _ChargerApp_FCN06CrossContactorVSECCOut
+0     0008bcf1  _ChargerApp_LimitCheck                 
+0     0008bd10  _ChargerApp_PhaseBalanceCheck          
+0     0008bd43  _ChargerApp_PhaseLimitCheck            
+0     00086cf6  _ChargerApp_VoltageLimitFault          
+0     00085aef  _ChargerContectorInitValues            
+1     0000aa00  _ChargerData                           
+0     00086c23  _ChargerFault                          
+0     00086dbb  _ChargerPerFault                       
+0     00085a69  _ChargerSetInitValues                  
+0     00086df5  _ChargerTempFault                      
+0     00085bfe  _Charger_FastChargeMSG                 
+0     00085cd5  _Charger_SlowChargeMsg                 
+0     0008a6f3  _CheckTonheOperation                   
+0     0008b744  _ConfigMuxInputPins                    
+0     0008b781  _ConfigMuxOutputPins                   
+0     00085b9c  _CoolingFan                            
+0     0008a396  _DCC_continuousMonitor                 
+0     0008a21c  _DCC_getRevisionNumber                 
+0     0008a2f2  _DCC_measureClockFrequency             
+0     0008a230  _DCC_verifyClockFrequency              
+1     0000a804  _DCEMModBusStatus1                     
+1     0000a805  _DCEMModBusStatus2                     
+0     00085b0c  _DCEMPower                             
+0     0008bc63  _DCReadOneParaValue32                  
+0     0008bc7d  _DCReadOneParaValue64                  
+1     0000a86a  _DC_EnergyMeterData1                   
+1     0000a874  _DC_EnergyMeterData2                   
+1     0000a80a  _DIOStatus                             
+1     0000ad5c  _Data1                                 
+1     0000ad5e  _Data2                                 
+0     00087db2  _DebounceLogic                         
+0     0008b2b3  _Device_enableAllPeripherals           
+0     0008b274  _Device_init                           
+0     0008b393  _Device_initGPIO                       
+0     0008b3a3  _Device_verifyXTAL                     
+0     00085734  _DigitalInputData                      
+0     00085b23  _DisplayPower                          
+1     0000ac7e  _Example_Fail                          
+1     0000ac7c  _Example_PassCount                     
+0     00085bae  _ExhaustFan                            
+0     0008be57  _ExtractPGN                            
+1     0000ac66  _Fapi_GlobalInit                       
+0     0008c03c  _Fapi_calculateFletcherChecksum        
+0     0008c23d  _Fapi_checkFsmForReady                 
+0     0008c26f  _Fapi_getFsmStatus                     
+0     0008bba8  _Fapi_initializeAPI                    
+0     0008be82  _Fapi_issueAsyncCommandWithAddress     
+0     0008b3dd  _Fapi_issueProgrammingCommand          
+0     0008c276  _Fapi_serviceWatchdogTimer             
+0     0008c00d  _Fapi_setActiveFlashBank               
+0     0008c13a  _Fapi_setupBankSectorEnable            
+0     0008bee6  _Fapi_setupEepromSectorEnable          
+1     0000a880  _FaultAndCounter                       
+0     00008088  _Flash_initModule                      
+0     000080b0  _Flash_powerDown                       
+0     000080c0  _Flash_wakeFromLPM                     
+0     0008ab7e  _Flow_Meter1                           
+0     0008abaf  _Flow_Meter2                           
+0     0008809c  _GPIOSetConfig                         
+0     0008b03f  _GPIO_getDirectionMode                 
+0     0008b0c8  _GPIO_getPadConfig                     
+0     0008b128  _GPIO_getQualificationMode             
+0     0008b197  _GPIO_setAnalogMode                    
+0     0008b16b  _GPIO_setControllerCore                
+0     0008b018  _GPIO_setDirectionMode                 
+0     0008b055  _GPIO_setInterruptPin                  
+0     0008b080  _GPIO_setPadConfig                     
+0     0008b1bf  _GPIO_setPinConfig                     
+0     0008b0fc  _GPIO_setQualificationMode             
+0     0008b149  _GPIO_setQualificationPeriod           
+0     0008a9be  _GUN1_CANISR                           
+0     0008aac9  _GUN2_CANISR                           
+0     00085b6b  _GeneralGPIO                           
+0     00085800  _GetACEMData                           
+0     00085986  _GetAnalogInputData                    
+0     000888c0  _GetChargerADCData                     
+0     000856ef  _GetDCEMEndEnergy                      
+0     000856e2  _GetDCEMStartEnergy                    
+0     000856fc  _GetDCEMStartTime                      
+0     00085708  _GetDCEMStopTime                       
+0     000856ca  _GetDCEMValue                          
+0     0008571f  _GetDigitalInputData                   
+0     00085355  _GetEVDataBCL                          
+0     00085418  _GetEVDataBST                          
+0     0008503b  _GetEVDataRNL                          
+0     00085714  _GetIMDData                            
+0     0008b788  _GetMuxInput                           
+0     00087e95  _GetNT1000TempValue                    
+0     00087e01  _GetPT1000TempValue                    
+0     0008562d  _GetRectStatusInfo                     
+0     00085bd9  _GunFault                              
+0     0008819f  _GunFlowMeterPinInit                   
+1     0000ad57  _GunNumber1                            
+1     0000ad58  _GunNumber2                            
+0     00086c19  _GunOperativeStatus                    
+0     00086d79  _GunPerFault                           
+0     00086d8e  _GunTempFault                          
+0     00085aa5  _GunVarInitValues                      
+0     000869e5  _Gunroutin                             
+0     000880ae  _I2CGPIOExpanstionInit                 
+0     00088236  _I2C_Error                             
+0     0008ba95  _I2C_clearInterruptStatus              
+0     0008bac3  _I2C_configureModuleClockFrequency     
+0     0008baad  _I2C_configureModuleFrequency          
+0     0008ba5b  _I2C_disableInterrupt                  
+0     0008ba3a  _I2C_enableInterrupt                   
+0     0008ba7d  _I2C_getInterruptStatus                
+0     0008b9a9  _I2C_initController                    
+0     0008b9f4  _I2C_initControllerModuleFrequency     
+0     000881fb  _I2CenableFIFO                         
+0     00088230  _I2CgetRxFIFOStatus                    
+0     000881f4  _I2CgetStopConditionStatus             
+0     00088223  _I2CgetTxFIFOStatus                    
+0     000881ee  _I2CisBusBusy                          
+0     00088216  _I2CputData                            
+0     0008821d  _I2CsendStartCondition                 
+0     0008822a  _I2CsendStopCondition                  
+0     00088201  _I2CsetConfig                          
+0     0008820f  _I2CsetDataCount                       
+0     00088208  _I2CsetSlaveAddress                    
+1     0000ad60  _I2Cstatus                             
+0     00088903  _IMDChecks                             
+1     0000a818  _IMDData1                              
+1     0000a81a  _IMDData2                              
+0     0008bf98  _IMDReadOneParaValue32                 
+1     0000a806  _IMDStatus1                            
+1     0000a807  _IMDStatus2                            
+0     0008bfba  _IMDWriteRegisters                     
+0     00086937  _IOT_ProcessCANMsg                     
+0     00087f22  _InitialiseCAN                         
+0     00088286  _InitialiseCANObject                   
+0     00087fd6  _InitialiseChargerInPins               
+0     00087ff1  _InitialiseChargerOutPins              
+0     0008c0bd  _Interrupt_defaultHandler              
+0     0008b6e2  _Interrupt_disable                     
+0     0008b6ab  _Interrupt_enable                      
+0     0008c0d3  _Interrupt_illegalOperationHandler     
+0     0008b650  _Interrupt_initModule                  
+0     0008b68d  _Interrupt_initVectorTable             
+0     0008c0dd  _Interrupt_nmiHandler                  
+0     0008827a  _InterruptclearACKGroup                
+1     0000a802  _LCAN                                  
+1     0000a826  _Left                                  
+1     0000a850  _LeftCSI1                              
+1     0000a858  _LeftCSI2                              
+1     0000a860  _LeftCSI3                              
+1     0000ab80  _LeftGun                               
+1     0000a840  _LeftPL1                               
+1     0000a848  _LeftPL2                               
+1     0000a82e  _LeftPS1                               
+1     0000a836  _LeftPS2                               
+0     000881c8  _MCU_UART_TxData                       
+0     00087c56  _MCU_UART_TxRxData                     
+1     0000a80b  _ModBusStartTaskFlag                   
+0     000869cc  _ModbusFaultcheck                      
+0     0008ae02  _ModbusFrameRegisterRead               
+0     0008afca  _ModbusFrameRegisterWrite              
+1     0000a80c  _ModbusStartTask                       
+0     0008adfd  _Modbus_Init                           
+0     0008ae31  _Modbus_TxRx                           
+1     0000a808  _MuxIO1                                
+1     0000a809  _MuxIO2                                
+0     00085b3a  _PLCPower                              
+0     0008a616  _ProcessACInfo                         
+0     00088e68  _ProcessBCP                            
+0     00088ef4  _ProcessBCS                            
+0     00088e3a  _ProcessBEM                            
+0     00088d26  _ProcessBatteryChargingLimit           
+0     00088c9c  _ProcessBatteryChargingParameter1      
+0     00088cca  _ProcessBatteryChargingParameter2      
+0     00088d54  _ProcessBatteryChargingStatus1         
+0     00088d82  _ProcessBatteryChargingStatus2         
+0     00088c44  _ProcessBatteryHandshakeMessage        
+0     00088cf8  _ProcessBatteryReadinessOk             
+0     00088c70  _ProcessBatteryResponseMessage         
+0     00088e0c  _ProcessBatteryShutdown                
+0     00088db0  _ProcessBatteryStatusMessage           
+0     00088dde  _ProcessBatteryStopTrigger             
+0     0008a5d5  _ProcessModuleFaultInfo                
+0     0008a5fa  _ProcessModuleStartStopConfirm         
+0     0008a592  _ProcessModuleState                    
+0     00085bb7  _PumpPower                             
+1     0000a801  _RCAN                                  
+1     0000a811  _RNLLeftFlag                           
+1     0000a9c0  _RNLLeftGun                            
+1     0000a940  _RNLLeftGunSend                        
+1     0000a80f  _RNLLeftMSGCTRL                        
+0     00088a03  _RNLRXCANOBJSet                        
+1     0000a810  _RNLRightFlag                          
+1     0000a980  _RNLRightGun                           
+1     0000a900  _RNLRightGunSend                       
+1     0000a80e  _RNLRightMSGCTRL                       
+0     00088a19  _RNLTXCANOBJSet                        
+0     00088b1f  _RNL_ProcessCANMsg                     
+1     0000ac5c  _RNL_Var                               
+0     0008c4c0  _RamfuncsLoadEnd                       
+abs   000000f0  _RamfuncsLoadSize                      
+0     0008c3d0  _RamfuncsLoadStart                     
+0     000080f0  _RamfuncsRunEnd                        
+abs   000000f0  _RamfuncsRunSize                       
+0     00008000  _RamfuncsRunStart                      
+0     0008bb0d  _ReadACEMeterData                      
+0     00089f88  _ReadConfiguration0                    
+0     00089fa2  _ReadConfiguration1                    
+0     0008bc9d  _ReadDCEMeterData                      
+0     00087d9f  _ReadGPIO                              
+0     0008bfa9  _ReadIMDData                           
+0     0008a024  _ReadInputLatch0                       
+0     0008a03e  _ReadInputLatch1                       
+0     00089efa  _ReadInputPort0                        
+0     00089f06  _ReadInputPort1                        
+0     0008a0c0  _ReadInterruptMask0                    
+0     0008a0da  _ReadInterruptMask1                    
+0     0008a0e7  _ReadInterruptStatus0                  
+0     0008a0f4  _ReadInterruptStatus1                  
+0     00089fbc  _ReadOutputDriveStrength0              
+0     00089fd6  _ReadOutputDriveStrength1              
+0     00089ff0  _ReadOutputDriveStrength2              
+0     0008a00a  _ReadOutputDriveStrength3              
+0     00089f2d  _ReadOutputPort0                       
+0     00089f3a  _ReadOutputPort1                       
+0     0008a10e  _ReadOutputPortConfig                  
+0     00089f61  _ReadPolarityInversion0                
+0     00089f6e  _ReadPolarityInversion1                
+0     0008a058  _ReadPullUpPullDownEnable0             
+0     0008a072  _ReadPullUpPullDownEnable1             
+0     0008a08c  _ReadPullUpPullDownSelect0             
+0     0008a0a6  _ReadPullUpPullDownSelect1             
+0     0008ae6c  _ReadRegisters                         
+0     00085974  _RectAliveCommand                      
+0     00085b43  _RectifierOnOffCtrl                    
+0     000859ec  _ResetGunContactor                     
+1     0000a822  _Right                                 
+1     0000a84c  _RightCSI1                             
+1     0000a854  _RightCSI2                             
+1     0000a85c  _RightCSI3                             
+1     0000aa80  _RightGun                              
+1     0000a83a  _RightPL1                              
+1     0000a844  _RightPL2                              
+1     0000a82a  _RightPS1                              
+1     0000a832  _RightPS2                              
+0     00088244  _SCI_BreakDtect                        
+0     00087d28  _SCI_CheckError                        
+0     0008ad94  _SCI_clearInterruptStatus              
+0     0008ad16  _SCI_disableInterrupt                  
+0     0008acdb  _SCI_enableInterrupt                   
+0     0008ad51  _SCI_getInterruptStatus                
+0     0008acaa  _SCI_readCharArray                     
+0     0008adcf  _SCI_setBaud                           
+0     0008ac4f  _SCI_setConfig                         
+0     0008adf4  _SCI_setWakeFlag                       
+0     0008ac73  _SCI_writeCharArray                    
+1     0000a800  _SCIbreakDTflag                        
+0     00087209  _SENDDiffDCEMeter                      
+0     00086ff3  _SendACMeterCurrentInputCANData        
+0     0008703f  _SendACMeterEnergyInputCANData         
+0     000870d7  _SendACMeterInputCANData               
+0     0008708b  _SendACMeterPowerInputCANData          
+0     00086fa7  _SendACMeterVoltageInputCANData        
+0     000872d8  _SendCANStopChargeLED                  
+0     00088657  _SendCMSCANMsg                         
+0     00086f7e  _SendCMSDigitalInputCANData            
+0     0008734e  _SendCMSFlowrate                       
+0     000876a5  _SendCMSI2CStatus                      
+0     0008765e  _SendCMSIOTStartStop                   
+0     00087595  _SendCMSModbusMeterStatus              
+0     0008878f  _SendCMSRNLMSGTOVSECC                  
+0     00086eeb  _SendCMSTempCANData                    
+0     00087381  _SendCMSVersionCANData                 
+0     000875f5  _SendCMS_TonheStatus                   
+0     00087843  _SendCMS_TotalMeasuredAmpVol           
+0     000871b9  _SendDCMeterPosEnergyCANData           
+0     0008717a  _SendDCMeterPowerCANData               
+0     0008713b  _SendDCMeterVoltAmpCANData             
+0     000873a6  _SendFaultCANData                      
+0     000878a4  _SendGUNStatus                         
+0     000876ca  _SendGunData                           
+0     00087259  _SendIMDMeterCANData                   
+1     0000a813  _SendLeft                              
+0     00086087  _SendRNLMessageChargeSessionInfo1      
+0     000860dc  _SendRNLMessageChargeSessionInfo2      
+0     00086140  _SendRNLMessageChargeSessionInfo3      
+0     00085fa8  _SendRNLMessagePECCLimits1             
+0     0008602a  _SendRNLMessagePECCLimits2             
+0     00085db4  _SendRNLMessagePECCStatus1             
+0     00085ef6  _SendRNLMessagePECCStatus2             
+0     00086254  _SendRNLMessageReset                   
+0     00085e68  _SendRNLMessageStopCharge              
+0     00085eb8  _SendRNLMessageVehicleId               
+0     000861a7  _SendRNLMessageVehicleStatus           
+1     0000a812  _SendRight                             
+0     0008594c  _SendSCIErrorCan                       
+0     00085448  _SendToRNL                             
+0     000878f5  _SendVehicleIDLeft                     
+0     000878d6  _SendVehicleIDRight                    
+0     00088aef  _SendtoRML_CCS                         
+0     00088b13  _SendtoRML_CEM                         
+0     00088ab3  _SendtoRML_CHM                         
+0     00088ad7  _SendtoRML_CML                         
+0     00088abf  _SendtoRML_CRM                         
+0     00088ae3  _SendtoRML_CRO                         
+0     00088b07  _SendtoRML_CSD                         
+0     00088afb  _SendtoRML_CST                         
+0     00088acb  _SendtoRML_CTS                         
+0     000859e3  _SetACContactor                        
+0     00085865  _SetChargerParameter                   
+0     00085a60  _SetCrossContactor                     
+0     0008b7e9  _SetDC1GUNSolenoid1                    
+0     0008b801  _SetDC1GUNSolenoid2                    
+0     0008b7d1  _SetDC1MOTBVIN1                        
+0     0008b7b9  _SetDC1MOTBVIN2                        
+0     0008b849  _SetDC2GUNSolenoid1                    
+0     0008b861  _SetDC2GUNSolenoid2                    
+0     0008b831  _SetDC2MOTBVIN1                        
+0     0008b819  _SetDC2MOTBVIN2                        
+0     00085899  _SetGunContactor                       
+0     00085925  _SetGunSolenoideDriveIN12              
+0     000858fe  _SetMotBallValveIN12                   
+0     0008b7a2  _SetMuxOutput                          
+0     00085951  _SetRectVoltageCurrent                 
+0     000858c6  _SetStatusLED                          
+0     000858e2  _SetStopChargeLED                      
+0     00085ba5  _StationLED                            
+0     00085b84  _StatusLED                             
+0     00085a39  _StopCharging                          
+0     00085bc0  _StopChargingGun                       
+0     00085b90  _StopLED                               
+0     00087da5  _SwitchPinReadDebounce                 
+0     000080ec  _SysCtl_delay                          
+0     00089aed  _SysCtl_getClock                       
+0     00089cbc  _SysCtl_getDeviceParametric            
+0     00089ca2  _SysCtl_getLowSpeedClock               
+0     00089d17  _SysCtl_isPLLValid                     
+0     00089c6c  _SysCtl_selectOscSource                
+0     00089c07  _SysCtl_selectXTAL                     
+0     00089c47  _SysCtl_selectXTALSingleEnded          
+0     00089b4b  _SysCtl_setClock                       
+0     00089e59  _TCAL9539_ReadRegister                 
+0     00089dee  _TCAL9539_WriteRegister                
+0     0008a670  _TONHECANCyclicCheck                   
+0     00087dea  _Timeout_MS                            
+0     00088fa9  _Timer1_ISR                            
+1     0000ad56  _TonheLCount                           
+1     0000ad80  _TonheLeftGun                          
+0     0008a543  _TonheProcessRxCANMsg                  
+1     0000ad55  _TonheRCount                           
+0     0008a482  _TonheRXCANOBJSet                      
+1     0000ae00  _TonheRightGun                         
+0     0008a532  _TonheSendTimingCommand                
+0     0008a498  _TonheSetCANID                         
+0     0008a4d2  _TonheSetParameter                     
+0     0008a4b0  _TonheStartStopCMD                     
+0     0008a43f  _TonheTXCANOBJSet                      
+1     0000a864  _Tonhe_Status                          
+1     0000ad5a  _VoltageX                              
+0     00089f7b  _WriteConfiguration0                   
+0     00089f95  _WriteConfiguration1                   
+0     00087de0  _WriteDGPIO                            
+0     0008a017  _WriteInputLatch0                      
+0     0008a031  _WriteInputLatch1                      
+0     0008a0b3  _WriteInterruptMask0                   
+0     0008a0cd  _WriteInterruptMask1                   
+0     00089faf  _WriteOutputDriveStrength0             
+0     00089fc9  _WriteOutputDriveStrength1             
+0     00089fe3  _WriteOutputDriveStrength2             
+0     00089ffd  _WriteOutputDriveStrength3             
+0     00089f13  _WriteOutputPort0                      
+0     00089f20  _WriteOutputPort1                      
+0     0008a101  _WriteOutputPortConfig                 
+0     00089f47  _WritePolarityInversion0               
+0     00089f54  _WritePolarityInversion1               
+0     0008a04b  _WritePullUpPullDownEnable0            
+0     0008a065  _WritePullUpPullDownEnable1            
+0     0008a07f  _WritePullUpPullDownSelect0            
+0     0008a099  _WritePullUpPullDownSelect1            
+0     0008c248  __Fapi_calculateOtpChecksum            
+0     0008c093  __Fapi_divideUnsignedLong              
+0     0008bfdd  __Fapi_issueFsmCommand                 
+0     0008c22e  __Fapi_scaleCycleValues                
+0     0008c068  __Fapi_setupSectorsForWrite            
+1     00000600  __STACK_END                            
+abs   00000200  __STACK_SIZE                           
+0     00000000  __TI_MEMRANGE_CRC__ccs_flash_checksum  
+1     0000ad50  ___TI_cleanup_ptr                      
+1     0000ad52  ___TI_dtors_ptr                        
+1     0000ad4e  ___TI_enable_exit_profile_output       
+abs   ffffffff  ___TI_pprof_out_hndl                   
+abs   ffffffff  ___TI_prof_data_size                   
+abs   ffffffff  ___TI_prof_data_start                  
+abs   ffffffff  ___binit__                             
+abs   ffffffff  ___c_args__                            
+0     0008c27c  ___cinit__                             
+0     0008b3d6  ___error__                             
+0     0008c27b  ___etext__                             
+abs   ffffffff  ___pinit__                             
+0     00085004  ___text__                              
+0     0008c21c  __args_main                            
+1     0000ad62  __lock                                 
+0     0008c266  __nop                                  
+0     0008c262  __register_lock                        
+0     0008c25e  __register_unlock                      
+1     00000400  __stack                                
+0     0008c27a  __system_post_cinit                    
+0     0008c278  __system_pre_init                      
+1     0000ad64  __unlock                               
+0     0008c111  _abort                                 
+0     0008bf42  _c_int00                               
+0     00000000  _ccs_flash_checksum                    
+0     0008c187  _copy_in                               
+1     0000a820  _elapsedTime                           
+1     0000a81e  _endTime                               
+0     0008c113  _exit                                  
+0     00088441  _main                                  
+0     0008c1e7  _memcpy                                
+1     0000ac80  _ptcTable                              
+0     0008be08  _setJ1939ID                            
+0     00087d40  _setModBusGPIO                         
+0     00087d7e  _setModBusUART                         
+0     00088f5c  _setupChargeHandshake                  
+0     00088f82  _setupChargeTimeStart                  
+1     0000a81c  _startTime                             
+0     00087df7  _swapBytes                             
+0     00089497  _wakeupISR                             
+abs   ffffffff  binit                                  
+0     0008c27c  cinit                                  
+0     00085000  code_start                             
+0     0008c27b  etext                                  
+abs   ffffffff  pinit                                  
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+page  address   name                                   
+----  -------   ----                                   
+0     00000000  __TI_MEMRANGE_CRC__ccs_flash_checksum  
+0     00000000  _ccs_flash_checksum                    
+0     00008000  _RamfuncsRunStart                      
+0     00008088  _Flash_initModule                      
+0     000080b0  _Flash_powerDown                       
+0     000080c0  _Flash_wakeFromLPM                     
+0     000080ec  _SysCtl_delay                          
+0     000080f0  _RamfuncsRunEnd                        
+0     00085000  code_start                             
+0     00085004  .text                                  
+0     00085004  ___text__                              
+0     0008503b  _GetEVDataRNL                          
+0     00085355  _GetEVDataBCL                          
+0     00085418  _GetEVDataBST                          
+0     00085448  _SendToRNL                             
+0     0008562d  _GetRectStatusInfo                     
+0     000856ca  _GetDCEMValue                          
+0     000856e2  _GetDCEMStartEnergy                    
+0     000856ef  _GetDCEMEndEnergy                      
+0     000856fc  _GetDCEMStartTime                      
+0     00085708  _GetDCEMStopTime                       
+0     00085714  _GetIMDData                            
+0     0008571f  _GetDigitalInputData                   
+0     00085734  _DigitalInputData                      
+0     00085800  _GetACEMData                           
+0     00085865  _SetChargerParameter                   
+0     00085899  _SetGunContactor                       
+0     000858c6  _SetStatusLED                          
+0     000858e2  _SetStopChargeLED                      
+0     000858fe  _SetMotBallValveIN12                   
+0     00085925  _SetGunSolenoideDriveIN12              
+0     0008594c  _SendSCIErrorCan                       
+0     00085951  _SetRectVoltageCurrent                 
+0     00085974  _RectAliveCommand                      
+0     00085986  _GetAnalogInputData                    
+0     000859e3  _SetACContactor                        
+0     000859ec  _ResetGunContactor                     
+0     00085a39  _StopCharging                          
+0     00085a60  _SetCrossContactor                     
+0     00085a69  _ChargerSetInitValues                  
+0     00085aa5  _GunVarInitValues                      
+0     00085aef  _ChargerContectorInitValues            
+0     00085b0c  _DCEMPower                             
+0     00085b23  _DisplayPower                          
+0     00085b3a  _PLCPower                              
+0     00085b43  _RectifierOnOffCtrl                    
+0     00085b6b  _GeneralGPIO                           
+0     00085b84  _StatusLED                             
+0     00085b90  _StopLED                               
+0     00085b9c  _CoolingFan                            
+0     00085ba5  _StationLED                            
+0     00085bae  _ExhaustFan                            
+0     00085bb7  _PumpPower                             
+0     00085bc0  _StopChargingGun                       
+0     00085bd9  _GunFault                              
+0     00085bfe  _Charger_FastChargeMSG                 
+0     00085cd5  _Charger_SlowChargeMsg                 
+0     00085d3f  _BootISR                               
+0     00085db4  _SendRNLMessagePECCStatus1             
+0     00085e68  _SendRNLMessageStopCharge              
+0     00085eb8  _SendRNLMessageVehicleId               
+0     00085ef6  _SendRNLMessagePECCStatus2             
+0     00085fa8  _SendRNLMessagePECCLimits1             
+0     0008602a  _SendRNLMessagePECCLimits2             
+0     00086087  _SendRNLMessageChargeSessionInfo1      
+0     000860dc  _SendRNLMessageChargeSessionInfo2      
+0     00086140  _SendRNLMessageChargeSessionInfo3      
+0     000861a7  _SendRNLMessageVehicleStatus           
+0     00086254  _SendRNLMessageReset                   
+0     000862cd  _ChargerApp_FCN01ACFaultFlag           
+0     00086369  _ChargerApp_FCN01ACFaultGlobalFlag     
+0     000863a9  _ChargerApp_FCN06CrossContactorVSECCOut
+0     00086409  _ChargerApp_FCN02DCGUNFaultCheck       
+0     00086483  _ChargerApp_FCN04PowerAllocation       
+0     00086521  _ChargerApp_FCN05GunState05            
+0     0008686f  _ChargerApp_FCN00StopChrage00          
+0     00086937  _IOT_ProcessCANMsg                     
+0     000869cc  _ModbusFaultcheck                      
+0     000869e5  _Gunroutin                             
+0     00086c19  _GunOperativeStatus                    
+0     00086c23  _ChargerFault                          
+0     00086cf6  _ChargerApp_VoltageLimitFault          
+0     00086d54  _CANPerfaultcheck                      
+0     00086d79  _GunPerFault                           
+0     00086d8e  _GunTempFault                          
+0     00086dbb  _ChargerPerFault                       
+0     00086df5  _ChargerTempFault                      
+0     00086ed7  _CMSRXCANOBJSet                        
+0     00086eeb  _SendCMSTempCANData                    
+0     00086f7e  _SendCMSDigitalInputCANData            
+0     00086fa7  _SendACMeterVoltageInputCANData        
+0     00086ff3  _SendACMeterCurrentInputCANData        
+0     0008703f  _SendACMeterEnergyInputCANData         
+0     0008708b  _SendACMeterPowerInputCANData          
+0     000870d7  _SendACMeterInputCANData               
+0     0008713b  _SendDCMeterVoltAmpCANData             
+0     0008717a  _SendDCMeterPowerCANData               
+0     000871b9  _SendDCMeterPosEnergyCANData           
+0     00087209  _SENDDiffDCEMeter                      
+0     00087259  _SendIMDMeterCANData                   
+0     00087286  _CMSTempSensor                         
+0     000872d8  _SendCANStopChargeLED                  
+0     000872fa  _CMSRXCANOBJState                      
+0     0008730e  _CMS_ProcessState                      
+0     0008734e  _SendCMSFlowrate                       
+0     00087381  _SendCMSVersionCANData                 
+0     000873a6  _SendFaultCANData                      
+0     00087595  _SendCMSModbusMeterStatus              
+0     000875f5  _SendCMS_TonheStatus                   
+0     0008765e  _SendCMSIOTStartStop                   
+0     000876a5  _SendCMSI2CStatus                      
+0     000876ca  _SendGunData                           
+0     00087843  _SendCMS_TotalMeasuredAmpVol           
+0     000878a4  _SendGUNStatus                         
+0     000878d6  _SendVehicleIDRight                    
+0     000878f5  _SendVehicleIDLeft                     
+0     00087c56  _MCU_UART_TxRxData                     
+0     00087d28  _SCI_CheckError                        
+0     00087d40  _setModBusGPIO                         
+0     00087d7e  _setModBusUART                         
+0     00087d9f  _ReadGPIO                              
+0     00087da5  _SwitchPinReadDebounce                 
+0     00087db2  _DebounceLogic                         
+0     00087de0  _WriteDGPIO                            
+0     00087dea  _Timeout_MS                            
+0     00087df7  _swapBytes                             
+0     00087e01  _GetPT1000TempValue                    
+0     00087e95  _GetNT1000TempValue                    
+0     00087f22  _InitialiseCAN                         
+0     00087f7b  _CANMSGObjectSetup                     
+0     00087f94  _CANSendMessage                        
+0     00087fb9  _CANInterruptEnable                    
+0     00087fd6  _InitialiseChargerInPins               
+0     00087ff1  _InitialiseChargerOutPins              
+0     0008809c  _GPIOSetConfig                         
+0     000880ae  _I2CGPIOExpanstionInit                 
+0     00088113  _ADC_Init                              
+0     00088178  _CPUTimerInit                          
+0     0008819f  _GunFlowMeterPinInit                   
+0     000881c8  _MCU_UART_TxData                       
+0     000881ee  _I2CisBusBusy                          
+0     000881f4  _I2CgetStopConditionStatus             
+0     000881fb  _I2CenableFIFO                         
+0     00088201  _I2CsetConfig                          
+0     00088208  _I2CsetSlaveAddress                    
+0     0008820f  _I2CsetDataCount                       
+0     00088216  _I2CputData                            
+0     0008821d  _I2CsendStartCondition                 
+0     00088223  _I2CgetTxFIFOStatus                    
+0     0008822a  _I2CsendStopCondition                  
+0     00088230  _I2CgetRxFIFOStatus                    
+0     00088236  _I2C_Error                             
+0     00088244  _SCI_BreakDtect                        
+0     0008824e  _CANgetStatus                          
+0     00088254  _CANreadMessageWithID                  
+0     00088263  _CANgetInterruptCause                  
+0     00088269  _CANclearInterruptStatus               
+0     00088273  _CANclearGlobalInterruptStatus         
+0     0008827a  _InterruptclearACKGroup                
+0     00088280  _CPUTimergetTimerCount                 
+0     00088286  _InitialiseCANObject                   
+0     00088441  _main                                  
+0     00088657  _SendCMSCANMsg                         
+0     0008878f  _SendCMSRNLMSGTOVSECC                  
+0     000888c0  _GetChargerADCData                     
+0     00088903  _IMDChecks                             
+0     0008899e  _BenchTestCode                         
+0     00088a03  _RNLRXCANOBJSet                        
+0     00088a19  _RNLTXCANOBJSet                        
+0     00088ab3  _SendtoRML_CHM                         
+0     00088abf  _SendtoRML_CRM                         
+0     00088acb  _SendtoRML_CTS                         
+0     00088ad7  _SendtoRML_CML                         
+0     00088ae3  _SendtoRML_CRO                         
+0     00088aef  _SendtoRML_CCS                         
+0     00088afb  _SendtoRML_CST                         
+0     00088b07  _SendtoRML_CSD                         
+0     00088b13  _SendtoRML_CEM                         
+0     00088b1f  _RNL_ProcessCANMsg                     
+0     00088c44  _ProcessBatteryHandshakeMessage        
+0     00088c70  _ProcessBatteryResponseMessage         
+0     00088c9c  _ProcessBatteryChargingParameter1      
+0     00088cca  _ProcessBatteryChargingParameter2      
+0     00088cf8  _ProcessBatteryReadinessOk             
+0     00088d26  _ProcessBatteryChargingLimit           
+0     00088d54  _ProcessBatteryChargingStatus1         
+0     00088d82  _ProcessBatteryChargingStatus2         
+0     00088db0  _ProcessBatteryStatusMessage           
+0     00088dde  _ProcessBatteryStopTrigger             
+0     00088e0c  _ProcessBatteryShutdown                
+0     00088e3a  _ProcessBEM                            
+0     00088e68  _ProcessBCP                            
+0     00088ef4  _ProcessBCS                            
+0     00088f5c  _setupChargeHandshake                  
+0     00088f82  _setupChargeTimeStart                  
+0     00088fa9  _Timer1_ISR                            
+0     00089497  _wakeupISR                             
+0     00089571  _CAN_initModule                        
+0     00089584  _CAN_setBitRate                        
+0     000895c8  _CAN_setBitTiming                      
+0     000895fa  _CAN_clearInterruptStatus              
+0     00089628  _CAN_setupMessageObject                
+0     000896e0  _CAN_sendMessage                       
+0     00089727  _CAN_sendMessage_16bit                 
+0     0008976e  _CAN_sendMessage_32bit                 
+0     000897b5  _CAN_sendMessage_updateDLC             
+0     00089842  _CAN_sendRemoteRequestMessage          
+0     00089872  _CAN_readMessage                       
+0     000898c3  _CAN_readMessageWithID                 
+0     000898f6  _CAN_transferMessage                   
+0     00089945  _CAN_clearMessage                      
+0     00089967  _CAN_disableMessageObject              
+0     00089989  _CAN_disableAllMessageObjects          
+0     00089aed  _SysCtl_getClock                       
+0     00089b4b  _SysCtl_setClock                       
+0     00089c07  _SysCtl_selectXTAL                     
+0     00089c47  _SysCtl_selectXTALSingleEnded          
+0     00089c6c  _SysCtl_selectOscSource                
+0     00089ca2  _SysCtl_getLowSpeedClock               
+0     00089cbc  _SysCtl_getDeviceParametric            
+0     00089d17  _SysCtl_isPLLValid                     
+0     00089dee  _TCAL9539_WriteRegister                
+0     00089e59  _TCAL9539_ReadRegister                 
+0     00089efa  _ReadInputPort0                        
+0     00089f06  _ReadInputPort1                        
+0     00089f13  _WriteOutputPort0                      
+0     00089f20  _WriteOutputPort1                      
+0     00089f2d  _ReadOutputPort0                       
+0     00089f3a  _ReadOutputPort1                       
+0     00089f47  _WritePolarityInversion0               
+0     00089f54  _WritePolarityInversion1               
+0     00089f61  _ReadPolarityInversion0                
+0     00089f6e  _ReadPolarityInversion1                
+0     00089f7b  _WriteConfiguration0                   
+0     00089f88  _ReadConfiguration0                    
+0     00089f95  _WriteConfiguration1                   
+0     00089fa2  _ReadConfiguration1                    
+0     00089faf  _WriteOutputDriveStrength0             
+0     00089fbc  _ReadOutputDriveStrength0              
+0     00089fc9  _WriteOutputDriveStrength1             
+0     00089fd6  _ReadOutputDriveStrength1              
+0     00089fe3  _WriteOutputDriveStrength2             
+0     00089ff0  _ReadOutputDriveStrength2              
+0     00089ffd  _WriteOutputDriveStrength3             
+0     0008a00a  _ReadOutputDriveStrength3              
+0     0008a017  _WriteInputLatch0                      
+0     0008a024  _ReadInputLatch0                       
+0     0008a031  _WriteInputLatch1                      
+0     0008a03e  _ReadInputLatch1                       
+0     0008a04b  _WritePullUpPullDownEnable0            
+0     0008a058  _ReadPullUpPullDownEnable0             
+0     0008a065  _WritePullUpPullDownEnable1            
+0     0008a072  _ReadPullUpPullDownEnable1             
+0     0008a07f  _WritePullUpPullDownSelect0            
+0     0008a08c  _ReadPullUpPullDownSelect0             
+0     0008a099  _WritePullUpPullDownSelect1            
+0     0008a0a6  _ReadPullUpPullDownSelect1             
+0     0008a0b3  _WriteInterruptMask0                   
+0     0008a0c0  _ReadInterruptMask0                    
+0     0008a0cd  _WriteInterruptMask1                   
+0     0008a0da  _ReadInterruptMask1                    
+0     0008a0e7  _ReadInterruptStatus0                  
+0     0008a0f4  _ReadInterruptStatus1                  
+0     0008a101  _WriteOutputPortConfig                 
+0     0008a10e  _ReadOutputPortConfig                  
+0     0008a21c  _DCC_getRevisionNumber                 
+0     0008a230  _DCC_verifyClockFrequency              
+0     0008a2f2  _DCC_measureClockFrequency             
+0     0008a396  _DCC_continuousMonitor                 
+0     0008a43f  _TonheTXCANOBJSet                      
+0     0008a482  _TonheRXCANOBJSet                      
+0     0008a498  _TonheSetCANID                         
+0     0008a4b0  _TonheStartStopCMD                     
+0     0008a4d2  _TonheSetParameter                     
+0     0008a532  _TonheSendTimingCommand                
+0     0008a543  _TonheProcessRxCANMsg                  
+0     0008a592  _ProcessModuleState                    
+0     0008a5d5  _ProcessModuleFaultInfo                
+0     0008a5fa  _ProcessModuleStartStopConfirm         
+0     0008a616  _ProcessACInfo                         
+0     0008a670  _TONHECANCyclicCheck                   
+0     0008a6f3  _CheckTonheOperation                   
+0     0008a9be  _GUN1_CANISR                           
+0     0008aac9  _GUN2_CANISR                           
+0     0008ab7e  _Flow_Meter1                           
+0     0008abaf  _Flow_Meter2                           
+0     0008ac4f  _SCI_setConfig                         
+0     0008ac73  _SCI_writeCharArray                    
+0     0008acaa  _SCI_readCharArray                     
+0     0008acdb  _SCI_enableInterrupt                   
+0     0008ad16  _SCI_disableInterrupt                  
+0     0008ad51  _SCI_getInterruptStatus                
+0     0008ad94  _SCI_clearInterruptStatus              
+0     0008adcf  _SCI_setBaud                           
+0     0008adf4  _SCI_setWakeFlag                       
+0     0008adfd  _Modbus_Init                           
+0     0008ae02  _ModbusFrameRegisterRead               
+0     0008ae31  _Modbus_TxRx                           
+0     0008ae44  _CRC16                                 
+0     0008ae6c  _ReadRegisters                         
+0     0008afca  _ModbusFrameRegisterWrite              
+0     0008b018  _GPIO_setDirectionMode                 
+0     0008b03f  _GPIO_getDirectionMode                 
+0     0008b055  _GPIO_setInterruptPin                  
+0     0008b080  _GPIO_setPadConfig                     
+0     0008b0c8  _GPIO_getPadConfig                     
+0     0008b0fc  _GPIO_setQualificationMode             
+0     0008b128  _GPIO_getQualificationMode             
+0     0008b149  _GPIO_setQualificationPeriod           
+0     0008b16b  _GPIO_setControllerCore                
+0     0008b197  _GPIO_setAnalogMode                    
+0     0008b1bf  _GPIO_setPinConfig                     
+0     0008b274  _Device_init                           
+0     0008b2b3  _Device_enableAllPeripherals           
+0     0008b393  _Device_initGPIO                       
+0     0008b3a3  _Device_verifyXTAL                     
+0     0008b3d6  ___error__                             
+0     0008b3dd  _Fapi_issueProgrammingCommand          
+0     0008b650  _Interrupt_initModule                  
+0     0008b68d  _Interrupt_initVectorTable             
+0     0008b6ab  _Interrupt_enable                      
+0     0008b6e2  _Interrupt_disable                     
+0     0008b744  _ConfigMuxInputPins                    
+0     0008b781  _ConfigMuxOutputPins                   
+0     0008b788  _GetMuxInput                           
+0     0008b7a2  _SetMuxOutput                          
+0     0008b7b9  _SetDC1MOTBVIN2                        
+0     0008b7d1  _SetDC1MOTBVIN1                        
+0     0008b7e9  _SetDC1GUNSolenoid1                    
+0     0008b801  _SetDC1GUNSolenoid2                    
+0     0008b819  _SetDC2MOTBVIN2                        
+0     0008b831  _SetDC2MOTBVIN1                        
+0     0008b849  _SetDC2GUNSolenoid1                    
+0     0008b861  _SetDC2GUNSolenoid2                    
+0     0008b879  _ADC_setVREF                           
+0     0008b8bc  _ADC_setINLTrim                        
+0     0008b902  _ADC_setOffsetTrim                     
+0     0008b94f  _ADC_setOffsetTrimAll                  
+0     0008b977  _ADC_setPPBTripLimits                  
+0     0008b9a9  _I2C_initController                    
+0     0008b9f4  _I2C_initControllerModuleFrequency     
+0     0008ba3a  _I2C_enableInterrupt                   
+0     0008ba5b  _I2C_disableInterrupt                  
+0     0008ba7d  _I2C_getInterruptStatus                
+0     0008ba95  _I2C_clearInterruptStatus              
+0     0008baad  _I2C_configureModuleFrequency          
+0     0008bac3  _I2C_configureModuleClockFrequency     
+0     0008baeb  _ACEMRead3PhaseValue                   
+0     0008bafc  _ACReadOneParaValue                    
+0     0008bb0d  _ReadACEMeterData                      
+0     0008bba8  _Fapi_initializeAPI                    
+0     0008bc63  _DCReadOneParaValue32                  
+0     0008bc7d  _DCReadOneParaValue64                  
+0     0008bc9d  _ReadDCEMeterData                      
+0     0008bcf1  _ChargerApp_LimitCheck                 
+0     0008bd10  _ChargerApp_PhaseBalanceCheck          
+0     0008bd43  _ChargerApp_PhaseLimitCheck            
+0     0008bd80  FS$$DIV                                
+0     0008be08  _setJ1939ID                            
+0     0008be57  _ExtractPGN                            
+0     0008be82  _Fapi_issueAsyncCommandWithAddress     
+0     0008bee6  _Fapi_setupEepromSectorEnable          
+0     0008bf42  _c_int00                               
+0     0008bf98  _IMDReadOneParaValue32                 
+0     0008bfa9  _ReadIMDData                           
+0     0008bfba  _IMDWriteRegisters                     
+0     0008bfdd  __Fapi_issueFsmCommand                 
+0     0008c00d  _Fapi_setActiveFlashBank               
+0     0008c03c  _Fapi_calculateFletcherChecksum        
+0     0008c068  __Fapi_setupSectorsForWrite            
+0     0008c093  __Fapi_divideUnsignedLong              
+0     0008c0bd  _Interrupt_defaultHandler              
+0     0008c0d3  _Interrupt_illegalOperationHandler     
+0     0008c0dd  _Interrupt_nmiHandler                  
+0     0008c0e7  L$$DIV                                 
+0     0008c0f6  L$$MOD                                 
+0     0008c104  UL$$DIV                                
+0     0008c10b  UL$$MOD                                
+0     0008c111  C$$EXIT                                
+0     0008c111  _abort                                 
+0     0008c113  _exit                                  
+0     0008c13a  _Fapi_setupBankSectorEnable            
+0     0008c162  FS$$TOULL                              
+0     0008c187  _copy_in                               
+0     0008c1c9  LL$$CMP                                
+0     0008c1db  ULL$$CMP                               
+0     0008c1e7  _memcpy                                
+0     0008c204  LL$$AND                                
+0     0008c20c  LL$$OR                                 
+0     0008c214  LL$$XOR                                
+0     0008c21c  __args_main                            
+0     0008c22e  __Fapi_scaleCycleValues                
+0     0008c23d  _Fapi_checkFsmForReady                 
+0     0008c248  __Fapi_calculateOtpChecksum            
+0     0008c253  U$$DIV                                 
+0     0008c258  U$$MOD                                 
+0     0008c25e  __register_unlock                      
+0     0008c262  __register_lock                        
+0     0008c266  __nop                                  
+0     0008c26f  _Fapi_getFsmStatus                     
+0     0008c276  _Fapi_serviceWatchdogTimer             
+0     0008c278  __system_pre_init                      
+0     0008c27a  __system_post_cinit                    
+0     0008c27b  ___etext__                             
+0     0008c27b  etext                                  
+0     0008c27c  ___cinit__                             
+0     0008c27c  cinit                                  
+0     0008c3d0  _RamfuncsLoadStart                     
+0     0008c4c0  _RamfuncsLoadEnd                       
+0     0008f000  _CRCTable                              
+1     00000400  __stack                                
+1     00000600  __STACK_END                            
+1     0000a800  _SCIbreakDTflag                        
+1     0000a801  _RCAN                                  
+1     0000a802  _LCAN                                  
+1     0000a803  _ACEMModBusStatus                      
+1     0000a804  _DCEMModBusStatus1                     
+1     0000a805  _DCEMModBusStatus2                     
+1     0000a806  _IMDStatus1                            
+1     0000a807  _IMDStatus2                            
+1     0000a808  _MuxIO1                                
+1     0000a809  _MuxIO2                                
+1     0000a80a  _DIOStatus                             
+1     0000a80b  _ModBusStartTaskFlag                   
+1     0000a80c  _ModbusStartTask                       
+1     0000a80d  _ACDisconnect                          
+1     0000a80e  _RNLRightMSGCTRL                       
+1     0000a80f  _RNLLeftMSGCTRL                        
+1     0000a810  _RNLRightFlag                          
+1     0000a811  _RNLLeftFlag                           
+1     0000a812  _SendRight                             
+1     0000a813  _SendLeft                              
+1     0000a818  _IMDData1                              
+1     0000a81a  _IMDData2                              
+1     0000a81c  _startTime                             
+1     0000a81e  _endTime                               
+1     0000a820  _elapsedTime                           
+1     0000a822  _Right                                 
+1     0000a826  _Left                                  
+1     0000a82a  _RightPS1                              
+1     0000a82e  _LeftPS1                               
+1     0000a832  _RightPS2                              
+1     0000a836  _LeftPS2                               
+1     0000a83a  _RightPL1                              
+1     0000a840  _LeftPL1                               
+1     0000a844  _RightPL2                              
+1     0000a848  _LeftPL2                               
+1     0000a84c  _RightCSI1                             
+1     0000a850  _LeftCSI1                              
+1     0000a854  _RightCSI2                             
+1     0000a858  _LeftCSI2                              
+1     0000a85c  _RightCSI3                             
+1     0000a860  _LeftCSI3                              
+1     0000a864  _Tonhe_Status                          
+1     0000a86a  _DC_EnergyMeterData1                   
+1     0000a874  _DC_EnergyMeterData2                   
+1     0000a880  _FaultAndCounter                       
+1     0000a88c  _ChargerAnalogReadVolt                 
+1     0000a8c0  _AC_EnergyMeterData                    
+1     0000a900  _RNLRightGunSend                       
+1     0000a940  _RNLLeftGunSend                        
+1     0000a980  _RNLRightGun                           
+1     0000a9c0  _RNLLeftGun                            
+1     0000aa00  _ChargerData                           
+1     0000aa80  _RightGun                              
+1     0000ab80  _LeftGun                               
+1     0000ac5c  _RNL_Var                               
+1     0000ac66  _Fapi_GlobalInit                       
+1     0000ac70  _BCL_Received_Flag_G1                  
+1     0000ac71  _BCL_Received_Flag_G2                  
+1     0000ac72  _BST_Received_Flag_G1                  
+1     0000ac73  _BST_Received_Flag_G2                  
+1     0000ac7c  _Example_PassCount                     
+1     0000ac7e  _Example_Fail                          
+1     0000ac80  _ptcTable                              
+1     0000ad4e  ___TI_enable_exit_profile_output       
+1     0000ad50  ___TI_cleanup_ptr                      
+1     0000ad52  ___TI_dtors_ptr                        
+1     0000ad54  _CANstatus                             
+1     0000ad55  _TonheRCount                           
+1     0000ad56  _TonheLCount                           
+1     0000ad57  _GunNumber1                            
+1     0000ad58  _GunNumber2                            
+1     0000ad5a  _VoltageX                              
+1     0000ad5c  _Data1                                 
+1     0000ad5e  _Data2                                 
+1     0000ad60  _I2Cstatus                             
+1     0000ad62  __lock                                 
+1     0000ad64  __unlock                               
+1     0000ad80  _TonheLeftGun                          
+1     0000ae00  _TonheRightGun                         
+abs   000000f0  _RamfuncsLoadSize                      
+abs   000000f0  _RamfuncsRunSize                       
+abs   00000200  __STACK_SIZE                           
+abs   ffffffff  ___TI_pprof_out_hndl                   
+abs   ffffffff  ___TI_prof_data_size                   
+abs   ffffffff  ___TI_prof_data_start                  
+abs   ffffffff  ___binit__                             
+abs   ffffffff  ___c_args__                            
+abs   ffffffff  ___pinit__                             
+abs   ffffffff  binit                                  
+abs   ffffffff  pinit                                  
+
+[502 symbols]
