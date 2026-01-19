@@ -18,6 +18,8 @@
 #include "flash.h"
 #include "driverlib.h"
 
+#define CAN_TX_TIMEOUT_MS   5
+
 //++++++++++++++++++++++Energy Meters and IMD +++++++++++++++++++++
 AC_EnergyMeterDataStruct AC_EnergyMeterData;
 DC_EnergyMeterDataStruct DC_EnergyMeterData1;
@@ -96,6 +98,7 @@ __interrupt void wakeupISR(void);
 void BenchTestCode();
 void SendCMSRNLMSGTOVSECC();
 void IMDChecks();
+uint8_t CAN_WaitTxComplete(uint32_t base);
 
 
 void main(void)
@@ -645,119 +648,119 @@ if(TimerTick10ms % 5 == 0)
 }
 void SendCMSCANMsg()
 {
-    while(CAN_getTxRequests(RECTIFIER_GUN1));
+    if(!CAN_WaitTxComplete(RECTIFIER_GUN1))return;
     SendACMeterVoltageInputCANData(ChargerData);
-    while(CAN_getTxRequests(RECTIFIER_GUN1));
+    if(!CAN_WaitTxComplete(RECTIFIER_GUN1))return;
     SendACMeterCurrentInputCANData(ChargerData);
-    while(CAN_getTxRequests(RECTIFIER_GUN1));
+    if(!CAN_WaitTxComplete(RECTIFIER_GUN1))return;
     SendACMeterEnergyInputCANData(ChargerData);
-    while(CAN_getTxRequests(RECTIFIER_GUN1));
+    if(!CAN_WaitTxComplete(RECTIFIER_GUN1))return;
     SendACMeterInputCANData(AC_EnergyMeterData, ChargerData);
 
-    while(CAN_getTxRequests(RECTIFIER_GUN1));
+    if(!CAN_WaitTxComplete(RECTIFIER_GUN1))return;
     SendDCMeterVoltAmpCANData(DC_EnergyMeterData1, 0);
-    while(CAN_getTxRequests(RECTIFIER_GUN1));
+    if(!CAN_WaitTxComplete(RECTIFIER_GUN1))return;
     SendDCMeterVoltAmpCANData(DC_EnergyMeterData2, 1);
-    while(CAN_getTxRequests(RECTIFIER_GUN1));
+    if(!CAN_WaitTxComplete(RECTIFIER_GUN1))return;
     SendDCMeterPowerCANData(DC_EnergyMeterData1, DC_EnergyMeterData2);
-    while(CAN_getTxRequests(RECTIFIER_GUN1));
+    if(!CAN_WaitTxComplete(RECTIFIER_GUN1))return;
     SendDCMeterPosEnergyCANData(RightGun, LeftGun);
-    while(CAN_getTxRequests(RECTIFIER_GUN1));
+    if(!CAN_WaitTxComplete(RECTIFIER_GUN1))return;
     SendIMDMeterCANData(IMDData1,IMDData2);
-    while(CAN_getTxRequests(RECTIFIER_GUN1));
+    if(!CAN_WaitTxComplete(RECTIFIER_GUN1))return;
     SENDDiffDCEMeter(RightGun,LeftGun);
 
-    while(CAN_getTxRequests(RECTIFIER_GUN1));
+    if(!CAN_WaitTxComplete(RECTIFIER_GUN1))return;
     SendCMSTempCANData(&RightGun,&LeftGun,&ChargerData);
-    while(CAN_getTxRequests(RECTIFIER_GUN1));
+    if(!CAN_WaitTxComplete(RECTIFIER_GUN1))return;
     SendCMSFlowrate(RightGun.FlowRate, LeftGun.FlowRate);
-    while(CAN_getTxRequests(RECTIFIER_GUN1));
+    if(!CAN_WaitTxComplete(RECTIFIER_GUN1))return;
     SendCMSDigitalInputCANData(MuxIO1,MuxIO2);
-    while(CAN_getTxRequests(RECTIFIER_GUN1));
+    if(!CAN_WaitTxComplete(RECTIFIER_GUN1))return;
     SendGunData(RightGun,LeftGun,ChargerData);
 
-    while(CAN_getTxRequests(RECTIFIER_GUN1));
+    if(!CAN_WaitTxComplete(RECTIFIER_GUN1))return;
     SendCANStopChargeLED(RightGun.StopChargeUserButton, LeftGun.StopChargeUserButton);
-    while(CAN_getTxRequests(RECTIFIER_GUN1));
+    if(!CAN_WaitTxComplete(RECTIFIER_GUN1))return;
     SendCMSIOTStartStop(RightGun, LeftGun);
 
-    while(CAN_getTxRequests(RECTIFIER_GUN1));
+    if(!CAN_WaitTxComplete(RECTIFIER_GUN1))return;
     SendCMSVersionCANData();
 
     // Communication
-    while(CAN_getTxRequests(RECTIFIER_GUN1));
+    if(!CAN_WaitTxComplete(RECTIFIER_GUN1))return;
     SendCMSModbusMeterStatus(&ACEMModBusStatus,&DCEMModBusStatus1,&DCEMModBusStatus2,&IMDStatus1,&IMDStatus2);
-    while(CAN_getTxRequests(RECTIFIER_GUN1));
+    if(!CAN_WaitTxComplete(RECTIFIER_GUN1))return;
     SendCMS_TonheStatus(Tonhe_Status);
-    while(CAN_getTxRequests(RECTIFIER_GUN1));
+    if(!CAN_WaitTxComplete(RECTIFIER_GUN1))return;
     SendCMSI2CStatus(DIOStatus, I2Cstatus);
-    while(CAN_getTxRequests(RECTIFIER_GUN1));
+    if(!CAN_WaitTxComplete(RECTIFIER_GUN1))return;
     SendCMS_TotalMeasuredAmpVol(RightGun, LeftGun);
-    while(CAN_getTxRequests(RECTIFIER_GUN1));
+    if(!CAN_WaitTxComplete(RECTIFIER_GUN1))return;
     SendVehicleIDRight(RightGun.VehicleID);
-    while(CAN_getTxRequests(RECTIFIER_GUN1));
+    if(!CAN_WaitTxComplete(RECTIFIER_GUN1))return;
     SendVehicleIDLeft(LeftGun.VehicleID);
 }
 
 
 void SendCMSRNLMSGTOVSECC()
 {
-   while(CAN_getTxRequests(RECTIFIER_GUN1));
+    if(!CAN_WaitTxComplete(RECTIFIER_GUN1))return;
    SendRNLMessageVehicleStatus(&RightGun,Right,1);
-   while(CAN_getTxRequests(RECTIFIER_GUN1));
+   if(!CAN_WaitTxComplete(RECTIFIER_GUN1))return;
    SendRNLMessageVehicleStatus(&LeftGun,Left,2);
 
-   while(CAN_getTxRequests(RECTIFIER_GUN1));
+   if(!CAN_WaitTxComplete(RECTIFIER_GUN1))return;
    SendRNLMessagePECCStatus1(&RightGun,RightPS1,1);
-   while(CAN_getTxRequests(RECTIFIER_GUN1));
+   if(!CAN_WaitTxComplete(RECTIFIER_GUN1))return;
    SendRNLMessagePECCStatus1(&LeftGun,LeftPS1,2);
 
-   while(CAN_getTxRequests(RECTIFIER_GUN1));
+   if(!CAN_WaitTxComplete(RECTIFIER_GUN1))return;
    SendRNLMessagePECCLimits1(&RightGun,RightPL1,1);
-   while(CAN_getTxRequests(RECTIFIER_GUN1));
+   if(!CAN_WaitTxComplete(RECTIFIER_GUN1))return;
    SendRNLMessagePECCLimits1(&LeftGun,LeftPL1,2);
 
-   while(CAN_getTxRequests(RECTIFIER_GUN1));
+   if(!CAN_WaitTxComplete(RECTIFIER_GUN1))return;
    SendRNLMessagePECCLimits2(&RightGun,RightPL2,1);
-   while(CAN_getTxRequests(RECTIFIER_GUN1));
+   if(!CAN_WaitTxComplete(RECTIFIER_GUN1))return;
    SendRNLMessagePECCLimits2(&LeftGun,LeftPL2,2);
 
-   while(CAN_getTxRequests(RECTIFIER_GUN1));
+   if(!CAN_WaitTxComplete(RECTIFIER_GUN1))return;
    SendRNLMessageChargeSessionInfo1(&RightGun,RightCSI1,1);
-   while(CAN_getTxRequests(RECTIFIER_GUN1));
+   if(!CAN_WaitTxComplete(RECTIFIER_GUN1))return;
    SendRNLMessageChargeSessionInfo1(&LeftGun,LeftCSI1,2);
 
 
-   while(CAN_getTxRequests(RECTIFIER_GUN1));
+   if(!CAN_WaitTxComplete(RECTIFIER_GUN1))return;
    SendRNLMessageChargeSessionInfo2(&RightGun,RightCSI2,1);
-   while(CAN_getTxRequests(RECTIFIER_GUN1));
+   if(!CAN_WaitTxComplete(RECTIFIER_GUN1))return;
    SendRNLMessageChargeSessionInfo2(&LeftGun,LeftCSI2,2);
 
-   while(CAN_getTxRequests(RECTIFIER_GUN1));
+   if(!CAN_WaitTxComplete(RECTIFIER_GUN1))return;
    SendRNLMessageChargeSessionInfo3(&RightGun,RightCSI3,1);
-   while(CAN_getTxRequests(RECTIFIER_GUN1));
+   if(!CAN_WaitTxComplete(RECTIFIER_GUN1))return;
    SendRNLMessageChargeSessionInfo3(&LeftGun,LeftCSI3,2);
 
 
-   while(CAN_getTxRequests(RECTIFIER_GUN1));
+   if(!CAN_WaitTxComplete(RECTIFIER_GUN1))return;
    SendRNLMessagePECCStatus2(&RightGun,&LeftGun,RightPS2,1);
-   while(CAN_getTxRequests(RECTIFIER_GUN1));
+   if(!CAN_WaitTxComplete(RECTIFIER_GUN1))return;
    SendRNLMessagePECCStatus2(&LeftGun,&RightGun,LeftPS2,2);
 
-   while(CAN_getTxRequests(RECTIFIER_GUN1));
+   if(!CAN_WaitTxComplete(RECTIFIER_GUN1))return;
    SendRNLMessageStopCharge(&RightGun,1);
-   while(CAN_getTxRequests(RECTIFIER_GUN1));
+   if(!CAN_WaitTxComplete(RECTIFIER_GUN1))return;
    SendRNLMessageStopCharge(&LeftGun,2);
 
-   while(CAN_getTxRequests(RECTIFIER_GUN1));
+   if(!CAN_WaitTxComplete(RECTIFIER_GUN1))return;
    SendRNLMessageReset(&RightGun,1);
-   while(CAN_getTxRequests(RECTIFIER_GUN1));
+   if(!CAN_WaitTxComplete(RECTIFIER_GUN1))return;
    SendRNLMessageReset(&LeftGun,2);
 
 
-   while(CAN_getTxRequests(RECTIFIER_GUN1));
+   if(!CAN_WaitTxComplete(RECTIFIER_GUN1))return;
    SendRNLMessageVehicleId(&RightGun,1);
-   while(CAN_getTxRequests(RECTIFIER_GUN1));
+   if(!CAN_WaitTxComplete(RECTIFIER_GUN1))return;
    SendRNLMessageVehicleId(&LeftGun,2);
 }
 
@@ -894,6 +897,20 @@ __interrupt void wakeupISR(void)
     CANSendMessage(RECTIFIER_GUN1, RESET_MAILBOX, (uint64_t *)&Data,8);
     SysCtl_setWatchdogMode(SYSCTL_WD_MODE_RESET);
     SysCtl_resetDevice();
+}
+uint8_t CAN_WaitTxComplete(uint32_t base)
+{
+    uint32_t timeout = CAN_TX_TIMEOUT_MS;
+
+    while (CAN_getTxRequests(base))
+    {
+        if (timeout-- == 0)
+        {
+            return 0;   // timeout
+        }
+        DEVICE_DELAY_US(1000); // 1 ms
+    }
+    return 1;            // TX completed
 }
 
 
